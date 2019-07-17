@@ -11,4 +11,14 @@ public class StrongTrial extends Trial {
 
         return (((double) getMark1() / 2) + getMark2()) >= getLevel();
     }
+
+    @Override
+    public boolean mark1IsPass() {
+        return super.mark1IsPass();
+    }
+
+    @Override
+    public boolean mark2IsPass() {
+        return super.mark2IsPass();
+    }
 }

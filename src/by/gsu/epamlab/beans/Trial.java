@@ -15,6 +15,17 @@ public class Trial {
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMark1(int mark1) {
+        this.mark1 = mark1;
+    }
+
+    public void setMark2(int mark2) {
+        this.mark2 = mark2;
+    }
 
     public static int getLevel() {
         return LEVEL;
@@ -34,6 +45,14 @@ public class Trial {
 
     public boolean isPassed() {
         return mark1 + mark2 >= LEVEL;
+    }
+
+    public boolean mark1IsPass(){
+        return mark1 >= LEVEL;
+    }
+
+    public boolean mark2IsPass(){
+        return mark2 >= LEVEL;
     }
 
     @Override

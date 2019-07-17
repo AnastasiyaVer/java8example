@@ -21,25 +21,6 @@ public class Runner {
         return index;
     }
 
-    private static boolean checkMark(Trial trial){
-        boolean check = true;
-        if(trial instanceof ExtraTrial){
-            if(!trial.mark1IsPass()){
-                if (!trial.mark1IsPass()){
-                    if(!((ExtraTrial) trial).mark3IsPass()){
-                        check = false;
-                    }
-                }
-            }
-        }else{
-            if(!trial.mark1IsPass()){
-                if (!trial.mark1IsPass()){
-                    check = false;
-                }
-            }
-        }
-        return check;
-    }
 
     public static void main(String[] args) {
         // 1
@@ -71,7 +52,6 @@ public class Runner {
 
         List<Trial> listUnpassTrials = new ArrayList<Trial>();
         listUnpassTrials = listTrials.stream().filter(s->s.isPassed()==false).collect(Collectors.toList());
-        listUnpassTrials.stream().filter(s->checkMark(s)).forEach((s)->{s.setMark1(0);s.setMark2(0);(ExtraTrial)s.setMark3(0);});
         listUnpassTrials.stream().forEach(
                 (t) -> System.out.println(t));
         // 7

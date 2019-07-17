@@ -15,13 +15,4 @@ public class LightTrial extends Trial {
         return ((getMark1() >= LEVEL_MARK1) && (getMark2() >= LEVEL_MARK2));
     }
 
-    @Override
-    public boolean mark1IsPass() {
-        return getMark1() <= LEVEL_MARK1;
-    }
-
-    @Override
-    public boolean mark2IsPass() {
-        return getMark2() <= LEVEL_MARK2;
-    }
 }

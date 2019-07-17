@@ -47,14 +47,6 @@ public class Trial {
         return mark1 + mark2 >= LEVEL;
     }
 
-    public boolean mark1IsPass(){
-        return mark1 >= LEVEL;
-    }
-
-    public boolean mark2IsPass(){
-        return mark2 >= LEVEL;
-    }
-
     @Override
     public String toString() {
         return String.format("%s;%d;%d", name, mark1, mark2) + isPassed(); // Delete

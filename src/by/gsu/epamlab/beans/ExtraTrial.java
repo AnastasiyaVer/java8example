@@ -28,18 +28,4 @@ public class ExtraTrial extends Trial {
         return super.toString() + "; " + mark3;
     }
 
-    @Override
-    public boolean mark1IsPass() {
-        return super.mark1IsPass();
-    }
-
-    @Override
-    public boolean mark2IsPass() {
-        return super.mark2IsPass();
-    }
-
-    public boolean mark3IsPass() {
-        return mark3 >= LEVEL;
-    }
-
 }
